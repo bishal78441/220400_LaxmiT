@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+th, td {
+  padding: 10px;
+}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+td[colspan="4"] {
+  background-color: red;
+  font-weight: bold;
+}
+td[colspan="1"] {
+  background-color: #8566ce;
+  font-weight: bold;
+}
+td[colspan="3"] {
+  background-color: palevioletred;
+  font-weight: bold;
+}
+.highlight{
+    background-color: green;
+    font-weight: bold;
+}
+.redd{
+    background-color: red;
+    font-weight: bold;
+}
+.highlights{
+    background-color: yellow;
+    font-weight: bold;
+}
+.hurray{
+    background-color: blueviolet;
+    font-weight: bold;
+}
+</style>
+<body>
+    <table border="1">
+        <tr>
+          <th>Time</th>
+          <th>Monday</th>
+          <th>Tuesday</th>
+          <th>Wednesday</th>
+          <th>Thursday</th>
+          <th>Friday</th>
+        </tr>
+        <tr>
+          <td>9:00 - 10:00</td>
+          <td>Digital Forensic</td>
+          <td>Security profession</td>
+          <td>computer and networking</td>
+          <td>web development</td>
+          <td>Critical thinking</td>
+        </tr>
+        <tr>
+          <td>10:00 - 11:00</td>
+          <td>Security profession</td>
+          <td>Digital Forensic</td>
+          <td>Critical thinking</td>
+          <td>computer and networking</td>
+          <td>web development</td>
+        </tr>
+        <tr>
+          <td>11:00 - 12:00</td>
+          <td colspan="4">Lunch Break</td>
+          <td colspan="2">Meeting</td>
+        </tr>
+        <tr>
+          <td>12:00 - 13:00</td>
+          <td>computer and networking</td>
+          <td>web development</td>
+          <td>Security profession</td>
+          <td>Digital Forensic</td>
+          <td>Critical thinking</td>
+        </tr>
+        <tr>
+          <td>13:00 - 14:00</td>
+          <td>web development</td>
+          <td>computer and networking</td>
+          <td>Critical thinking</td>
+          <td>Security profession</td>
+          <td>Digital Forensic</td>
+        </tr>
+        <tr>
+            <td>14:00 - 16:00</td>
+            <td class="redd">Sports</td>
+            <td class="highlight">Quiz</td>
+            <td class="highlights">E-sports</td>
+            <td class="hurray" colspan="2">holiday</td>
+        </tr>
+      </table>
+</body>
+</html>
