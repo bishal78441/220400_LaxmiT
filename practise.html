@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Weekly Schedule</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        td {
+            background-color: #fff;
+        }
+        .bold {
+            font-weight: bold;
+        }
+        .red {
+            background-color: #ffcccc;
+        }
+        .yellow {
+            background-color: #ffffcc;
+        }
+        .green {
+            background-color: #ccffcc;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Day</th>
+            <th>Time</th>
+            <th>Event</th>
+        </tr>
+        <tr>
+            <td rowspan="2">Monday</td>
+            <td>9:00 - 10:00</td>
+            <td>Meeting</td>
+        </tr>
+        <tr>
+            <td>14:00 - 16:00</td>
+            <td class="bold red" colspan="2">Training</td>
+        </tr>
+        <tr>
+            <td>Tuesday</td>
+            <td>11:00 - 12:00</td>
+            <td class="yellow">Presentation</td>
+        </tr>
+        <tr>
+            <td>Wednesday</td>
+            <td>10:00 - 11:00</td>
+            <td>Project Review</td>
+        </tr>
+        <tr>
+            <td rowspan="3">Thursday</td>
+            <td>9:00 - 10:00</td>
+            <td class="bold green">Client Meeting</td>
+        </tr>
+        <tr>
+            <td>11:00 - 12:00</td>
+            <td>Team Meeting</td>
+        </tr>
+        <tr>
+            <td>15:00 - 17:00</td>
+            <td>Brainstorming Session</td>
+        </tr>
+        <tr>
+            <td>Friday</td>
+            <td>14:00 - 16:00</td>
+            <td>Product Demo</td>
+        </tr>
+            <tr>
+                <td rowspan="3">Saturday</td>
+                <td>9:00 - 12:00</td>
+                <td class="bold red">Rest time</td>
+            </tr>
+            <tr>
+                <td>12:00 - 2:00</td>
+                <td>vehicle service</td>
+            </tr>
+        <tr>
+            <td>Sunday</td>
+            <td>Rest Day</td>
+            <td>Rest Day</td>
+        </tr>
+    </table>
+</body>
+</html>
