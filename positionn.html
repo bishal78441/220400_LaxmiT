@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Container Box Example</title>
+    <style>
+      .container {
+        position: relative;
+        height: 500px;
+        width: 100%;
+        background-color: lightgray;
+        border: 1px solid black;
+        padding: 20px;
+      }
+
+      .box {
+        height: 100px;
+        width: 100px;
+        border: 1px solid black;
+      }
+
+      .static {
+        position: static;
+        background-color: yellow;
+      }
+
+      .relative {
+        position: relative;
+        background-color: blue;
+        top: 50px;
+        left: 50px;
+        margin: 20px;
+      }
+
+      .absolute {
+        position: absolute;
+        background-color: red;
+        top: 100px;
+        right: 150px;
+        margin: 20px;
+      }
+
+      .fixed {
+        position: fixed;
+        background-color: green;
+        bottom: 150px;
+        right: 20px;
+        margin: 20px;
+      }
+
+      .sticky {
+        position: sticky;
+        background-color: orange;
+        top: 150px;
+        margin: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box static">static</div>
+      <div class="box relative">relative</div>
+      <div class="box absolute">absolute</div>
+      <div class="box fixed">fixed</div>
+      <div class="box sticky">sticky</div>
+    </div>
+  </body>
+</html>
