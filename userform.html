@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<body>
+     <h1><center>Bishal Cooperative Pvt. Ltd Form</center></h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            border: 1px solid black;
+            max-width: 350px;
+            margin-left: 40%;
+            padding: 10px;
+        }
+
+        label{
+            font-weight: bolder;
+            margin-bottom: 10px;
+        }
+        input{
+          
+          padding: 12px 20px;
+          margin: 8px 0;
+          display: inline-block;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+          padding: 20px;
+        }
+        
+        input[type=submit] {
+          background-color: #4CAF50;
+          color: white;
+          padding: 14px 20px;
+          margin: 8px 0;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+        
+        input[type=submit]:hover {
+          background-color: #45a049;
+        }
+        </style>
+        
+    </head>
+    <body>
+      <form id="user-form">
+        <label for="name">Your Good name</label> <br>
+        <input type="text" name="name" placeholder="name"> <br>
+
+        <label for="class">Class</label> <br>
+        <input type="text" name="class" placeholder="class" max="14"> <br>
+
+        <label for="studentID"> Student ID</label> <br>
+        <input type="number" name="studentID" placeholder="studentID"> <br>
+
+        <label for="phone">Contact Number</label> <br>
+        <input type="tel" name="phone" placeholder="phone"> <br>
+
+        <label for="email">Email</label> <br>
+        <input type="email" name="email" placeholder="email"> <br>
+
+        <label for="address">Your Address</label> <br>
+        <input type="text" name="address" placeholder="address"> <br>
+
+        <label for="gender">Gender</label> <br>
+        <input type="radio" name="gender" value="male"> Male 
+        <input type="radio" name="gender" value="female"> Female <br>
+
+        <label for="subject">Subject</label> <br>
+        <input type="checkbox" name="subject" value=" BSC(hons.) Ethical Hacking and Cyber-security"> Ethical Hacking and Cyber-security 
+        <input type="checkbox" name="subject" value="BSC(hons.) Computing"> BSC(hons.) Computing <br>
+
+        <label for="section">Your Section with Batch</label> <br>
+        <input type="text" name="section" placeholder="section"> <br>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" cols="40" required></textarea>
+
+        <label for="points">Rank me up with 1-10</label> <br>
+        <input type="number" name="point" placeholder="Point" max="10"> <br>
+
+        <input type="submit" value="submit">
+      </form>
+
+    <!-- Table to display user info -->
+    <table id="user-form">
+      <thead>
+        <tr>
+          <th>name</th>
+          <th>class</th>
+          <th>studentID</th>
+          <th>phone</th>
+          <th>email</th>  
+          <th>section</th>
+          <th>message</th>
+          <th>points</th>
+          <th>address</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <script>
+      const form = document.querySelector("form");
+      const table = document.querySelector("#user-form tbody");
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        // Get form values
+        const name = document.querySelector("#name").value;
+        const class = document.querySelector("#class").value;
+        const studentID = document.querySelector("#studentID").value;
+        const Phone = document.querySelector("#phone").value;
+        const email = document.querySelector("#email").value;
+        const section = document.querySelector("#section").value;
+        const message = document.querySelector("#message").value;
+        const points = document.querySelector("#points").value;
+        const address = document.querySelector("#address").value;
+
+        // Append row to table
+        const row = table.insertRow();
+        const nameCell = row.insertCell(0);
+        const classCell = row.insertCell(1);
+        const studentIDCell = row.insertCell(2);
+        const phoneCell = row.insertCell(3);
+        const emailCell = row.insertCell(4);
+        const sectionCell = row.insertCell(5);
+        const messageCell = row.insertCell(6);
+        const pointsCell = row.insertCell(7);
+        const addressCell = row.insertCell(8);
+        nameCell.innerHTML = name;
+        classCell.innerHTML = class;
+        studentIDCell.innerHTML = studentID;
+        phoneCell.innerHTML = phone;
+        emailCell.innerHTML = email;
+        sectionCell.innerHTML = section;
+        messageCell.innerHTML = section;
+        pointsCell.innerHTML = points;
+        addressCell.innerHTML = address;
+
+
+        // Clear form fields
+        form.reset();
+
+        // Show the table
+        document.querySelector("#user-form").style.display = "table";
+      });
+    </script>
+  </body>
+</html>
