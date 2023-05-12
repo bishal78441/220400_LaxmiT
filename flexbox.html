@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+<style>*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 1;
+    
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.flex-container{
+    /* height: 400px; */
+    display: flex;
+    /* flex-direction: column; */
+    background: #f4f4f4;
+    /* Always on the main axis start, center, end, space around, space between */
+    justify-content: space-between; 
+    /* Always on the cross axis */
+    align-items: start;
+    /* flex-wrap: wrap; */
+
+}
+
+.item{
+    flex-basis: 100px;
+    height: 100px;
+    background-color: #254de4;
+    margin: 10px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.item:nth-of-type(1) {   
+}
+
+.item:nth-of-type(2) {
+}
+
+.item:nth-of-type(3) {
+}
+
+.item:nth-of-type(4) {
+}
+
+.item:nth-of-type(5) {
+}
+
+.item:nth-of-type(6) {   
+}
+
+.item:nth-of-type(7) {
+}
+
+.item:nth-of-type(8) {
+}
+
+.item:nth-of-type(9) {
+}
+
+.item:nth-of-type(10) {
+}
+</style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+        <div class="item">Item 6</div>
+        <div class="item">Item 7</div>
+        <div class="item">Item 8</div>
+        <div class="item">Item 9</div>
+        <div class="item">Item 10</div>
+    </div>
+</body>
+</html>
