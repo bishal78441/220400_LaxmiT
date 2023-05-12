@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Information</title>
+</head>
+<body>
+  <h1>Student Information</h1>
+  <form id="studentForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name">
+    <br>
+    <label for="Class">Class:</label>
+    <input type="text" id="Class" name="Class">
+    <br>
+    <label for="StudentID">Student ID:</label>
+    <input type="text" id="StudentID" name="StudentID">
+    <br>
+    <label for="Phone">Phone:</label>
+    <input type="text" id="Phone" name="Phone">
+    <br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email">
+    <br>
+    <label for="Section">Section:</label>
+    <input type="text" id="Section" name="Section">
+    <br>
+    <label for="points">Points:</label>
+    <input type="number" id="points" name="points">
+    <br>
+    <label for="address">Address:</label>
+    <input type="text" id="address" name="address">
+    <br>
+    <input type="submit" value="Submit">
+  </form>
+  <table id="studentTable">
+    <tr>
+      <th>Name</th>
+      <th>Class</th>
+      <th>Student ID</th>
+      <th>Phone</th>
+      <th>Email</th>
+      <th>Section</th>
+      <th>Points</th>
+      <th>Address</th>
+    </tr>
+  </table>
+  <script>
+    document.getElementById("studentForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      // Get form values
+      const form = document.getElementById("studentForm");
+      const name = form.elements["name"].value;
+      const Class = form.elements["Class"].value;
+      const StudentID = form.elements["StudentID"].value;
+      const Phone = form.elements["Phone"].value;
+      const email = form.elements["email"].value;
+      const Section = form.elements["Section"].value;
+      const points = form.elements["points"].value;
+      const address = form.elements["address"].value;
+
+      // Append row to table
+      const table = document.getElementById("studentTable");
+      const row = table.insertRow();
+      const nameCell = row.insertCell(0);
+      const classCell = row.insertCell(1);
+      const studentIDCell = row.insertCell(2);
+      const phoneCell = row.insertCell(3);
+      const emailCell = row.insertCell(4);
+      const sectionCell = row.insertCell(5);
+      const pointsCell = row.insertCell(6);
+      const addressCell = row.insertCell(7);
+      nameCell.innerHTML = name;
+      classCell.innerHTML = Class;
+      studentIDCell.innerHTML = StudentID;
+      phoneCell.innerHTML = Phone;
+      emailCell.innerHTML = email;
+      sectionCell.innerHTML = Section;
+      pointsCell.innerHTML = points;
+      addressCell.innerHTML = address;
+
+      // Reset form values
+      form.reset();
+    });
+  </script>
+</body>
+</html>
