@@ -1,0 +1,134 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="questions.js"></script>
+</head>
+<body>
+    <p>Vayo vai Vayo</p>
+</body>
+</html>
+ -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .quiz-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f7f7f7;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-top: 0;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  input[type="radio"] {
+    margin-right: 10px;
+  }
+  
+  button {
+    margin-top: 20px;
+  }
+  
+  #result {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 20px;
+  }
+  
+    </style>
+</head>
+
+<body>
+    <div id="quiz"></div>
+    <button type="button" onclick="checkAnswers()">Submit</button>
+    <div id="result"></div>
+
+
+    <script>
+        // Set up an array of question objects with the question, options and answer properties
+        const questions = [
+            {
+                question: "The flag of Nepal resembles a geometrical figure. Which is it?",
+                options: ["Rhombus", "circle", "Traingle", "Square"],
+                answer: "Traingle"
+            },
+            {
+                question: "When was Nepal declared a republic?",
+                options: ["28 may 2007", "27 May 2008", "29 May 2007", "28 May 2008"],
+                answer: "28 May 2008"
+            },
+            {
+                question: "Which river is known as the “holy river” of Nepal?",
+                options: ["Brahmaputra", "Indus", "Ganges", "Kali Gandaki"],
+                answer: "Ganges"
+            },
+            {
+                question: "About how many languages are spoken in Nepal?",
+                options: ["120", "121", "124", "123"],
+                answer: "123"
+            }
+        ];
+
+        // Initialize the HTML for the quiz
+        let quizHTML = "";
+
+        // Loop through the questions and create the HTML for each question
+        for (let i = 0; i < questions.length; i++) {
+            // Add the question text
+            quizHTML += "<p>" + questions[i].question + "</p>";
+
+            // Add the answer options
+            for (let j = 0; j < questions[i].options.length; j++) {
+                quizHTML += "<label>";
+                quizHTML += "<input type='radio' name='question" + i + "' value='" + questions[i].options[j] + "'>";
+                quizHTML += questions[i].options[j];
+                quizHTML += "</label>";
+            }
+        }
+
+        // Display the HTML for the quiz
+        document.getElementById("quiz").innerHTML = quizHTML;
+
+        function checkAnswers() {
+            // Keep track of the number of correct answers
+            let numCorrect = 0;
+
+            // Loop through the questions and check the selected answer against the correct answer
+            for (let i = 0; i < questions.length; i++) {
+                const selectedAnswer = document.querySelector("input[name='question" + i + "']:checked").value;
+
+                if (selectedAnswer == questions[i].answer) {
+                    numCorrect++;
+                }
+            }
+
+            // Display the result message
+            const resultHTML = "You got " + numCorrect + " out of " + questions.length + " questions correct.";
+            document.getElementById("result").innerHTML = resultHTML;
+        }
+
+    </script>
+</body>
+
+</html>
